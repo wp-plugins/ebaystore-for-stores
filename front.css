@@ -1,0 +1,84 @@
+.ebaypicture{
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	display: block;
+	float: left;
+}
+
+.ebaypicture a{
+  text-decoration: none;
+}
+
+.ebaypicture a:hover{
+  background-color: transparent;
+  text-decoration: none;
+}
+
+img.ebay {
+	border: 1px solid #E1E1E1;
+	margin: 5px 10px 0 0;
+}
+
+.singleEbay p{
+  line-height: 20px;
+	margin: 0px;
+}
+
+.ebaytitle {
+  clear: both;
+  display: block;
+	width: 98%;
+	font-size:15px;
+	font-weight:normal;
+	line-height: 20px;
+}
+
+.ebaytitle a{
+  text-decoration: none;
+}
+
+.ebaytitle a:hover{
+  color:red;
+  background: transparent;
+}
+
+.ebayLabelsMulti{
+	margin-top:2px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.ebayLabelsMulti p{
+  margin: 0px;
+}
+
+.ebayLabelsMulti span {
+	font-weight: bold;
+}
+
+.ebayLabelsMulti p a{
+  text-decoration: none;
+}
+
+.ebayLabelsMulti p a:hover{
+  color:red;
+  background: transparent;
+}
+
+#linkauction{
+  float: right;
+}
+
+.multiEbay{
+  display: block;
+  width: 98%;
+  border-top: 1px dotted #ccc;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 0;
+}
+
+.clearEbay{
+    clear: both;
+    border: 0px;
+}
