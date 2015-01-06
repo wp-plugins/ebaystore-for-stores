@@ -1,17 +1,17 @@
 === eBaystore-for-stores ===
 Contributors: chrismis
 Donate link: http://www.edeetion.com
-Tags: auction, listing
+Tags: auction, listing, ebay
 Requires at least: 2.5
-Tested up to: 3.X
-Stable tag: 3.0
+Tested up to: 4.X
+Stable tag: 4.0
 License: GPLv2 or laterLicense URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-eBaystore-for-stores is a plugin allowing to display eBay auctions from a unique eBay store, in a river news html interface.
+eBaystore-for-stores is a plugin allowing to display eBay auctions from a unique eBay store, in a table view or a column interface.
 
 == Description ==
 
-eBaystore is a plugin allowing to display eBay auctions from a unique eBay store, as a html river news in any Wordpress page, or wordpress module.
+eBaystore is a plugin allowing to display eBay auctions from a unique eBay store, as a table view or a column in any Wordpress page, or wordpress module.
 Just select some parameters to match your needs and your listing will be automatically displayed in the module. This module uses the the latest API available on Ebay developer website.
 Our plugins are eBay compatible application certified.
 
@@ -22,7 +22,10 @@ Our plugins are eBay compatible application certified.
 5. Widget call by javascript: validated code by W3C
 6. CSS editable
 7. five languages.
-8. Also available for other CMS.
+8. 2 formats available: column river view or table responsive view.
+9. display date is optional in table view
+10. Also available for other CMS.
+11. Optional filter by keyword. 
 
 
 == Installation ==
@@ -43,10 +46,17 @@ Our plugins are eBay compatible application certified.
 * Full version for Wordpress.
 * Another change.
 
+= 4.0 =
+* Updated version for Wordpress until 4.x
+* Another change.
+
 == Upgrade Notice ==
+
 = 3.0 =
 first wordpress version
 
+= 4.0 =
+Updated version for Wordpress until 4.x
 
 == Frequently Asked Questions ==
 1. [FAQ : visit our FAQ on edeetion.com](http://www.edeetion.com/faq/modules-for-cms "eBaystore") 
@@ -60,6 +70,9 @@ first wordpress version
 4. NUMBER OF AUCTIONS : Number between 1 and 100
 5. LANGUAGES : 5 languages available.
 6. LOCALIZATION : localize your auctions by country in the 11 ebay different websites
+7. FORMATS: table resposive view or river column view
+8. DISPLAY DATE: optional in table responsive view
+9. KEYWORD: optional filter by keyword. 
 
 == Documentation and support ==
 

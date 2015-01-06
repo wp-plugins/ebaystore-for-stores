@@ -3,13 +3,13 @@
  * @package EBay Plugins
  */
 /*
-Plugin Name: Ebay Store for stores
-Plugin URI: http://www.edeetion.com
+Plugin Name: Ebay Store
+Plugin URI: http://www.edeetion.com/ebaystore
 Description: 
-Version: 3.0
-Author: edeetion
+Version: 4.0
+Author: http://www.edeetion.com
 Author URI: http://www.edeetion.com
-License: GPL v2
+License: http://www.edeetion.com
 */
 
 /**

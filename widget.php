@@ -37,7 +37,11 @@ function widget_ebay_store_register() {
         'paginationInput.entriesPerPage'    => isset($params['maxEntries']) ? $params['maxEntries'] : '3',
         'sortOrder'                         => isset($params['sortOrder'])  ? $params['sortOrder']  : 'BestMatch',
         'GLOBAL-ID'                         => isset($params['global_id'])  ? $params['global_id'] : 'EBAY-US',
-        'openlink'                          => isset($params['openlink'])   ? $params['openlink']  : '_blank',
+        'openlink'                          => isset($params['openlink'])   ? $params['openlink']  : '_blank',        
+
+        'floatorder'  => isset($params['floatorder']) ? $params['floatorder'] : 'regular',
+        'displaydate' => isset($params['displaydate']) ? $params['displaydate'] : 'yes',
+       
         'proxy_display_language'            => isset($params['proxy_display_language']) ? $params['proxy_display_language'] : 'en',
     );
 
@@ -53,7 +57,6 @@ function widget_ebay_store_register() {
           } else
              $callUrl .= '&' . $key . '=' . $param;
       }
-
       return '<script type="text/javascript" src="'.$callUrl.'"></script>';
   }
 

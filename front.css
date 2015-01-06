@@ -1,6 +1,57 @@
+/* new floating auctions: ebayseller */
+
+ul.products {
+}
+
+.blockauction {
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  display: inline-block; 
+  vertical-align: top; 
+  *display: inline; 
+  *zoom: 1;
+  border-top: 1Px solid #E1E1E1;
+  padding-top: 10px;
+ width: 150px;
+}
+
+.blockauction img{
+  margin: 5px 0px 0px;
+  border:1px solid #666666;
+
+}
+
+.blockauction img:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  border:1px solid #666;
+}
+
+.blockauction .ebaytitle {
+  font-size: 12px; 
+  line-height: 13px;
+  margin-top: 10px;
+}
+
+.blockauction  .price {
+  background: #333;
+  color: #fff;
+  margin:0px auto 0px;
+  padding: 3px 0 3px 0;
+}
+
+.blockauction  .date_end {
+  background: #999;
+  color: #fff;
+  margin:0 auto;
+  font-size: 10px;
+}
+
+/* end new floating auctions: ebayseller */
+
 .ebaypicture{
 	padding-bottom: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 5px;	
 	display: block;
 	float: left;
 }
@@ -59,6 +110,8 @@ img.ebay {
 .ebayLabelsMulti p a{
   text-decoration: none;
 }
+
+
 
 .ebayLabelsMulti p a:hover{
   color:red;

@@ -63,6 +63,19 @@ function ebay_store_get_form($form_values = array()){
       "EBAY-FRBE" => "Belgium-fr",
       "EBAY-NLBE" => "Belgium-nl",
     );
+    
+        $ebay_displaydate = array(
+          "true"          => "yes",
+          "false"           => "no"
+    );
+    
+    $ebay_floatorder = array(
+          "floating"          => "floating",
+          "Regular"           => "regular"
+    );
+    
+    
+    
     $ebay_sort_order = array(
       "BestMatch"                 => "BestMatch",
       "CurrentPriceHighest"       => "CurrentPriceHighest",
@@ -82,7 +95,7 @@ function ebay_store_get_form($form_values = array()){
     $ret = "";
     $ret .= '<form class="ebay_store" method="post">';
     $ret .= '<div class="field">';
-    $ret .=   '<label>'.__("StoreName").'</label>';
+    $ret .=   '<label>'.__("StoreName<BR />").'</label>';
     $ret .= ' <input type="text" value="%%%storeName%%%" name="ebay_configuration[storeName]">';
     $ret .= ' <div class="description">'.__("Your Store Name on Ebay (case sentisitve)").'</div>';
     $ret .= '</div>';
@@ -92,12 +105,12 @@ function ebay_store_get_form($form_values = array()){
     $ret .=   '<div class="description">'.__("Ebay country source").'</div>';
     $ret .= '</div>';
     $ret .= '<div class="field">';
-    $ret .=   '<label>'.__("Maximum items").'</label>';
+    $ret .=   '<label>'.__("Maximum items<BR />").'</label>';
     $ret .=   '<input type="text" value="%%%maxEntries%%%" name="ebay_configuration[maxEntries]">';
-    $ret .=   '<div class="description">'.__("Maximum items").'</div>';
+    $ret .=   '<div class="description">'.__("Maximum items limited to 100").'</div>';
     $ret .= '</div>';
     $ret .= '<div class="field">';
-    $ret .=   '<label>'.__("Enter your intro text").'</label>';
+    $ret .=   '<label>'.__("Enter your intro text <BR /><em>* optional</em>").'</label>';
     $ret .=   '<textarea name="ebay_configuration[intro]">'."%%%intro%%%".'</textarea>';
     $ret .=   '<div class="description">'.__("Enter your intro text").'</div>';
     $ret .= '</div>';
@@ -109,11 +122,34 @@ function ebay_store_get_form($form_values = array()){
     $ret .= '<div class="field">';
     $ret .=   '<label>'.__("Open ebay link").'</label>';
     $ret .=   ebay_store_generateSelectFromArray($ebay_open_link, 'ebay_configuration[openlink]', isset($form_values['openlink']) ? $form_values['openlink'] : "");
-    $ret .=   '<div class="description">'.__("Open ebay link").'</div>';
+    $ret .=   '<div class="description">&nbsp;</div>';
     $ret .= '</div>';
+    
+      
+    $ret .= '<div class="field">';
+    $ret .=   '<label>'.__("<b>floating auctions</b> (responsive rows and columns on full available page) or <b>regular column version</b>").'</label>';
+    $ret .=   ebay_seller_generateSelectFromArray($ebay_floatorder, 'ebay_configuration[floatorder]', isset($form_values['floatorder']) ? $form_values['floatorder'] : "");
+    $ret .=   '<div class="description">&nbsp;</div>';
+    $ret .= '</div>';
+    
+     
+    $ret .= '<div class="field">';
+    $ret .=   '<label>'.__("<b>Display date on floating version</b>").'</label>';
+    $ret .=   ebay_seller_generateSelectFromArray($ebay_displaydate, 'ebay_configuration[displaydate]', isset($form_values['displaydate']) ? $form_values['displaydate'] : "");
+    $ret .=   '<div class="description">&nbsp;</div>';
+    $ret .= '</div>';
+    
+     $ret .= '<div class="field">';
+    $ret .=   '<label>'.__("Keyword<BR />").'</label>';
+    $ret .=   '<input type="text" value="%%%keywords%%%" name="ebay_configuration[keywords]">';
+    $ret .=   '<div class="description">'.__("optional").'</div>';
+    $ret .= '</div>';
+    
+    
     $ret .= '<div class="field">';
     $ret .=   '<label>'.__("Display language").'</label>';
     $ret .=   ebay_store_generateSelectFromArray($ebay_proxy_language_list, 'ebay_configuration[proxy_display_language]', isset($form_values['proxy_display_language']) ? $form_values['proxy_display_language'] : "");
+    
     $ret .= '</div>';
     $ret .= '<div class="clear"></div>';
     $ret .= '<input type="submit" name="submit" value="Save"/>';
@@ -122,6 +158,7 @@ function ebay_store_get_form($form_values = array()){
     $ret = str_replace("%%%storeName%%%", isset($form_values['storeName']) ? $form_values['storeName'] : "", $ret);
     $ret = str_replace("%%%maxEntries%%%", isset($form_values['maxEntries']) ? $form_values['maxEntries'] : "3", $ret);
     $ret = str_replace("%%%intro%%%", isset($form_values['intro']) ? $form_values['intro'] : "", $ret);
+    $ret = str_replace("%%%keywords%%%", isset($form_values['keywords']) ? $form_values['keywords'] : "", $ret);
 
 
     return $ret;
